@@ -1,4 +1,6 @@
 # Speaker-Identification-Text-Analysis
 The aim of this project was to build a model, that given a sample line of dialog, could identify the character from a TV series most likely to have spoken it. The data set chosen for the project and published to Kaggle is 18 seasons worth of dialog from the animated Comedy Central series, South Park.
+
 The selected data set offers 70,896 observations, with each observation being one or more sentences of dialog spoken by a character on the show. The data set attributes the dialog to 3,950 unique characters, but an overwhelming majority of them speak only a few lines (1-10 observations), while the main characters (Cartman, Stan, and Kyle) are associated with 7,248 to 9,843 observations each. To avoid imbalanced classes of data, our model limited its scope to analyzing the top three characters.
+
 As detailed in this report, significant challenges were encountered in obtaining a suitable F-1 and accuracy score. Our initial plan of applying multiple NLP techniques in tandem and weighting their classifications together, was abandoned in favor of testing a number of classifiers on the data. Ultimately, it was found that the Support Vector Machine (SVM) classifier provided the best results, achieving a precision of .54, a recall of 0.80, an F-1 score of 0.64, and an accuracy score of 0.52 for the characters Cartman.
